@@ -4,6 +4,9 @@ Dự án nghiên cứu sâu về cơ chế vận hành của JVM, Memory và Con
 
 ## 🚀 Lộ trình Thực hiện (Roadmap)
 
+> [!TIP]
+> **[GUIDE.md](file:///f:/nexus-java-internals-lab/GUIDE.md)**: Chứa quy trình Git, Cheat Sheet các câu lệnh JVM quan trọng bạn cần dùng.
+
 ### Phase 1: Khám phá kiến trúc JVM
 Hiểu cách Java biến thành mã máy và cách JVM quản lý class.
 - `#1`: Khởi tạo Project & JIT Compilation.
