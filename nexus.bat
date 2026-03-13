@@ -39,31 +39,35 @@ echo [OTHER]
 echo   0. Exit
 echo.
 echo ============================================================
-set /p choice="Chon so de chay (0-15): "
-
-if "%choice%"=="1" call "scripts\run_phase1_issue1.bat"
-if "%choice%"=="2" call "scripts\run_phase1_issue2.bat"
-if "%choice%"=="3" call "scripts\run_phase2_issue3.bat"
-if "%choice%"=="4" call "scripts\run_phase2_issue4.bat"
-if "%choice%"=="5" call "scripts\run_phase3_issue5.bat"
-if "%choice%"=="6" call "scripts\run_phase3_issue6.bat"
-if "%choice%"=="7" call "scripts\run_phase3_issue7.bat"
-if "%choice%"=="8" call "scripts\run_phase4_issue8.bat"
-if "%choice%"=="9" call "scripts\run_phase4_issue9.bat"
-
-:: Placeholders for future phases
-if "%choice%"=="10" echo [INFO] Issue #10 đang được phát triển... ^& pause
-if "%choice%"=="11" echo [INFO] Issue #11 đang được phát triển... ^& pause
-if "%choice%"=="12" echo [INFO] Issue #12 đang được phát triển... ^& pause
-if "%choice%"=="13" echo [INFO] Issue #13 đang được phát triển... ^& pause
-if "%choice%"=="14" echo [INFO] Issue #14 đang được phát triển... ^& pause
-if "%choice%"=="15" echo [INFO] Issue #15 đang được phát triển... ^& pause
+set /p choice="Your Choice (0-15): "
 
 if "%choice%"=="0" goto end
+if "%choice%"=="1" call scripts\run_phase1_issue1.bat
+if "%choice%"=="2" call scripts\run_phase1_issue2.bat
+if "%choice%"=="3" call scripts\run_phase2_issue3.bat
+if "%choice%"=="4" call scripts\run_phase2_issue4.bat
+if "%choice%"=="5" call scripts\run_phase3_issue5.bat
+if "%choice%"=="6" call scripts\run_phase3_issue6.bat
+if "%choice%"=="7" call scripts\run_phase3_issue7.bat
+if "%choice%"=="8" call scripts\run_phase4_issue8.bat
+if "%choice%"=="9" call scripts\run_phase4_issue9.bat
+if "%choice%"=="10" call scripts\run_phase5_issue10.bat
+
+if "%choice%"=="11" goto placeholder
+if "%choice%"=="12" goto placeholder
+if "%choice%"=="13" goto placeholder
+if "%choice%"=="14" goto placeholder
+if "%choice%"=="15" goto placeholder
 
 echo.
-echo Bam phim bat ky de quay lai menu...
+echo Invalid Choice. Press any key back to menu.
 pause > nul
+goto menu
+
+:placeholder
+echo.
+echo [INFO] This issue is currently under development...
+pause
 goto menu
 
 :end
