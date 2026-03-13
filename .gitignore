@@ -7,3 +7,14 @@ target/
 *.iml
 out/
 gen/
+
+# Logs & Recordings
+*.log
+*.jfr
+*.txt
+!GUIDE.md
+!README.md
+!docs/gc_logs/*.txt
+
+# Screenshots
+docs/screenshots/*.png
