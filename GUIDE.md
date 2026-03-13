@@ -58,10 +58,29 @@ nexus-java-internals-lab/
 │               ├── phase1/      # JVM, ClassLoader, JIT
 │               ├── phase2/      # Memory Leak, GC Logs
 │               ├── phase3/      # Thread Pool, Virtual Threads
-│               └── phase4/      # Deadlock, Profiling
+│               ├── phase4/      # Deadlock, Profiling
+│               ├── phase5/      # NIO, Zero-copy
+│               ├── phase6/      # CPU Optimization, JNI, JIT Inlining
+│               └── phase7/      # Off-heap Memory Management
 ├── docs/                        # Lưu các file báo cáo, log phân tích
 └── resources/                   # Lưu các file .class ngoại vi cho CustomClassLoader
 ```
+
+---
+
+## 🛠️ Câu lệnh "Cheat Sheet" cho Internals (Nâng cao)
+
+### Phase 5: High-Performance I/O
+*   **Buffer Direct Allocation**: `ByteBuffer.allocateDirect(size)`
+*   **Zero-copy Transfer**: `channel.transferTo(position, count, targetChannel)`
+
+### Phase 6: Low-Level Optimization
+*   **Xem JIT Inlining**: `-XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining`
+*   **Trình biên dịch C (Windows)**: `gcc -shared -o mylib.dll mylib.c` (Cần MinGW)
+
+### Phase 7: Memory Manager
+*   **Direct Buffer Monitoring**: `jcmd <PID> VM.native_memory summary` (Cần `-XX:NativeMemoryTracking=summary`)
+*   **Check GC Pause (Off-heap focus)**: So sánh log GC khi dùng Heap vs Off-heap.
 
 ---
 *Chúc bạn có những giờ phút "vọc vạch" JVM thật thú vị!*

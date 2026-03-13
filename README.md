@@ -63,6 +63,21 @@ Kỹ năng xử lý khi ứng dụng gặp sự cố.
 - `#8`: Deadlock Analysis & Thread Dump.
 - `#9`: Performance Bottleneck with JFR & JMeter.
 
+### Phase 5: High-Performance I/O (Mạng và Tệp tin)
+Làm chủ `java.nio` (New I/O) và cơ chế **Zero-copy**.
+- `#10`: NIO Echo Server với Selector (1 Thread xử lý 1000 kết nối).
+- `#11`: Zero-copy File Transfer mô phỏng cơ chế của Kafka.
+
+### Phase 6: Low-Level Java & CPU Optimization
+Viết code tối ưu cho CPU và phần cứng.
+- `#12`: False Sharing Lab & CPU Cache Line.
+- `#13`: JIT Inlining - Bí mật đằng sau các hàm nhỏ của Java.
+- `#14`: Project Panama / JNI - Giao tiếp với mã nguồn C/C++.
+
+### Phase 7: The Final Boss - Custom Memory Manager
+Chiếm quyền kiểm soát bộ nhớ từ tay JVM.
+- `#15`: Off-heap Big Data Cache (Lưu trữ hàng triệu bản ghi ngoài Heap).
+
 ## 🛠️ Công cụ & Công nghệ
 - Core Java (JDK 21+ tối ưu cho Virtual Threads)
 - Git & GitHub Issues

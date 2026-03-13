@@ -23,11 +23,23 @@ echo [PHASE 4: PROFILING ^& DEBUGGING]
 echo   8. Issue #8: Deadlock Analysis ^& Thread Dump
 echo   9. Issue #9: JFR Performance Profiling
 echo.
+echo [ADVANCED: PHASE 5 - HIGH PERFORMANCE I/O]
+echo   10. Issue #10: NIO Selector Echo Server
+echo   11. Issue #11: Zero-copy File Transfer
+echo.
+echo [ADVANCED: PHASE 6 - LOW-LEVEL ^& CPU]
+echo   12. Issue #12: False Sharing ^& CPU Cache
+echo   13. Issue #13: JIT Method Inlining
+echo   14. Issue #14: Project Panama / JNI
+echo.
+echo [ADVANCED: PHASE 7 - MEMORY MANAGER]
+echo   15. Issue #15: Off-heap Memory Manager
+echo.
 echo [OTHER]
 echo   0. Exit
 echo.
 echo ============================================================
-set /p choice="Chon so de chay (0-9): "
+set /p choice="Chon so de chay (0-15): "
 
 if "%choice%"=="1" call "scripts\run_phase1_issue1.bat"
 if "%choice%"=="2" call "scripts\run_phase1_issue2.bat"
@@ -38,6 +50,15 @@ if "%choice%"=="6" call "scripts\run_phase3_issue6.bat"
 if "%choice%"=="7" call "scripts\run_phase3_issue7.bat"
 if "%choice%"=="8" call "scripts\run_phase4_issue8.bat"
 if "%choice%"=="9" call "scripts\run_phase4_issue9.bat"
+
+:: Placeholders for future phases
+if "%choice%"=="10" echo [INFO] Issue #10 đang được phát triển... ^& pause
+if "%choice%"=="11" echo [INFO] Issue #11 đang được phát triển... ^& pause
+if "%choice%"=="12" echo [INFO] Issue #12 đang được phát triển... ^& pause
+if "%choice%"=="13" echo [INFO] Issue #13 đang được phát triển... ^& pause
+if "%choice%"=="14" echo [INFO] Issue #14 đang được phát triển... ^& pause
+if "%choice%"=="15" echo [INFO] Issue #15 đang được phát triển... ^& pause
+
 if "%choice%"=="0" goto end
 
 echo.
