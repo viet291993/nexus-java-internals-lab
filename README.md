@@ -44,39 +44,39 @@ Sau đó, hãy chọn số tương ứng với Issue bạn muốn thực hiện 
 
 ### Phase 1: Khám phá kiến trúc JVM
 Hiểu cách Java biến thành mã máy và cách JVM quản lý class.
-- `#1`: Khởi tạo Project & JIT Compilation.
-- `#2`: Custom ClassLoader & Bytecode Analysis.
+- `Issue #1` (Lab #1): Khởi tạo Project & JIT Compilation.
+- `Issue #2` (Lab #2): Custom ClassLoader & Bytecode Analysis.
 
 ### Phase 2: Quản lý bộ nhớ (JMM & GC)
 Hiểu sâu về Stack, Heap và cơ chế Garbage Collection.
-- `#3`: Mô phỏng Memory Leak & OutOfMemoryError.
-- `#4`: Cấu hình GC & Phân tích GC Log.
+- `Issue #3` (Lab #3): Mô phỏng Memory Leak & OutOfMemoryError.
+- `Issue #4` (Lab #4): Cấu hình GC & Phân tích GC Log.
 
 ### Phase 3: Đồng bộ hóa & Đa luồng (Concurrency)
 Xử lý tác vụ song song, tránh Race Condition và tối ưu Performance.
-- `#5`: Race Condition & Atomic Synchronization.
-- `#6`: Xây dựng Custom ThreadPool.
-- `#7`: Virtual Threads (Java 21+).
+- `Issue #5` (Lab #5): Race Condition & Atomic Synchronization.
+- `Issue #6` (Lab #6): Xây dựng Custom ThreadPool.
+- `Issue #7` (Lab #7): Virtual Threads (Java 21+).
 
 ### Phase 4: Giám sát & Bắt lỗi (Profiling)
 Kỹ năng xử lý khi ứng dụng gặp sự cố.
-- `#8`: Deadlock Analysis & Thread Dump.
-- `#9`: Performance Bottleneck with JFR & JMeter.
+- `Issue #8` (Lab #8): Deadlock Analysis & Thread Dump.
+- `Issue #9` (Lab #9): Performance Bottleneck with JFR & JMeter.
 
 ### Phase 5: High-Performance I/O (Mạng và Tệp tin)
 Làm chủ `java.nio` (New I/O) và cơ chế **Zero-copy**.
-- `#10`: NIO Echo Server với Selector (1 Thread xử lý 1000 kết nối).
-- `#11`: Zero-copy File Transfer mô phỏng cơ chế của Kafka.
+- `Issue #19` (Lab #10): NIO Echo Server với Selector (1 Thread xử lý 1000 kết nối).
+- `Issue #20` (Lab #11): Zero-copy File Transfer mô phỏng cơ chế của Kafka.
 
 ### Phase 6: Low-Level Java & CPU Optimization
 Viết code tối ưu cho CPU và phần cứng.
-- `#12`: False Sharing Lab & CPU Cache Line.
-- `#13`: JIT Inlining - Bí mật đằng sau các hàm nhỏ của Java.
-- `#14`: Project Panama / JNI - Giao tiếp với mã nguồn C/C++.
+- `Issue #21` (Lab #12): False Sharing Lab & CPU Cache Line.
+- `Issue #22` (Lab #13): JIT Inlining - Bí mật đằng sau các hàm nhỏ của Java.
+- `Issue #23` (Lab #14): Project Panama / JNI - Giao tiếp với mã nguồn C/C++.
 
 ### Phase 7: The Final Boss - Custom Memory Manager
 Chiếm quyền kiểm soát bộ nhớ từ tay JVM.
-- `#15`: Off-heap Big Data Cache (Lưu trữ hàng triệu bản ghi ngoài Heap).
+- `Issue #24` (Lab #15): Off-heap Big Data Cache (Lưu trữ hàng triệu bản ghi ngoài Heap).
 
 ## 🛠️ Công cụ & Công nghệ
 - Core Java (JDK 21+ tối ưu cho Virtual Threads)
