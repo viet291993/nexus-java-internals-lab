@@ -30,7 +30,14 @@ Dự án đã hoàn thành cả 4 giai đoạn nghiên cứu với các kết qu
 
 ---
 
-## 🚀 Lộ trình Thực hiện (Roadmap)
+## 🚀 Cách chạy các bài Lab
+
+Để chạy bất kỳ bài lab nào, bạn chỉ cần thực thi tệp tin trung tâm ở thư mục gốc:
+
+```cmd
+nexus.bat
+```
+Sau đó, hãy chọn số tương ứng với Issue bạn muốn thực hiện từ Menu hiện ra.
 
 > [!TIP]
 > **[GUIDE.md](GUIDE.md)**: Chứa quy trình Git, Cheat Sheet các câu lệnh JVM quan trọng bạn cần dùng.
