@@ -82,5 +82,19 @@ nexus-java-internals-lab/
 *   **Direct Buffer Monitoring**: `jcmd <PID> VM.native_memory summary` (Cần `-XX:NativeMemoryTracking=summary`)
 *   **Check GC Pause (Off-heap focus)**: So sánh log GC khi dùng Heap vs Off-heap.
 
+## 🧠 Deep Dive Notes (Lưu ý chuyên sâu cho Phase 5-7)
+
+### Phase 5: High-Performance I/O
+- **Selector Management**: Cần đặc biệt chú ý xử lý `SelectionKey`. Việc quên `iterator.remove()` sau khi xử lý sự kiện là nguyên nhân phổ biến gây ra rò rỉ bộ nhớ hoặc lặp vô hạn.
+- **Zero-copy & mmap**: Khi thực hiện Issue #11, hãy tìm hiểu về `MappedByteBuffer`. Đây là cầu nối giữa FileChannel và bộ nhớ, cho phép truyền dữ liệu trực tiếp từ Disk sang Network Card (kernel-to-kernel) mà không qua User Space.
+
+### Phase 6: Low-Level Optimization
+- **JMH (Java Microbenchmark Harness)**: Bắt buộc sử dụng JMH cho Issue #12. Việc đo thời gian bằng `System.nanoTime()` thường bị sai lệch do JIT Compiler thực hiện Dead Code Elimination hoặc Loop Unrolling.
+- **Cache Line Awareness**: Hiểu rằng CPU nạp dữ liệu theo khối 64-byte. Nếu hai biến nằm sát nhau, chúng sẽ tranh chấp cache (False Sharing) làm giảm hiệu năng đa luồng trầm trọng.
+
+### Phase 7: Off-heap Memory Manager
+- **Manual Control**: Đây là vùng đất "không bảo hiểm". Bạn phải tự gọi `free` hoặc quản lý vòng đời của `DirectBuffer`. 
+- **The Trade-off**: Đánh đổi sự an toàn của GC lấy độ trễ (Latency) cực thấp. Phù hợp cho các hệ thống Big Data Cache hàng Terabyte mà vẫn muốn giữ Pause Time của GC ở mức mili giây.
+
 ---
 *Chúc bạn có những giờ phút "vọc vạch" JVM thật thú vị!*

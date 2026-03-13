@@ -15,6 +15,3 @@ gen/
 !GUIDE.md
 !README.md
 !docs/gc_logs/*.txt
-
-# Screenshots
-docs/screenshots/*.png
